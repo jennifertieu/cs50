@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote Results
+{% endblock %}
+
+{% block main %}
+    <!-- Add results table -->
+    <table>
+        <thead>
+            <tr>
+                <th>Symbol</th>
+                <th>Name</th>
+                <th>Quote</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ results["symbol"]}}</td>
+                <td>{{ results["name"]}}</td>
+                <td>{{ "${:,.2f}".format(results["price"]) }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

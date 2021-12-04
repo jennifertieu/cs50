@@ -1,0 +1,33 @@
+header {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+p {
+    text-indent: 40px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    height:100%;
+    width:100%;
+
+}
+
+.social {
+    text-align: center;
+    font-size: 24px;
+}
+
+#answer {
+    color: blue;
+    font-weight: bold;
+}
+

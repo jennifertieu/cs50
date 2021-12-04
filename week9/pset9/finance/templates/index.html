@@ -1,0 +1,44 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Portfolio
+{% endblock %}
+
+{% block main %}
+    <!-- Add results table -->
+    <div>
+        <table class="center">
+            <thead>
+                <tr>
+                    <th>Symbol</th>
+                    <th>Number of Shares</th>
+                    <th>Current Price</th>
+                    <th>Total Value</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for stock in portfolio %}
+                    <tr>
+                        <td>{{ stock.symbol }}</td>
+                        <td>{{ stock.shares }}</td>
+                        <td>{{ "${:,.2f}".format(stock_price[stock.symbol]) }}</td>
+                        <td>{{ "${:,.2f}".format(stock_holding[stock.symbol]) }}</td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td>CASH</td>
+                    <td></td>
+                    <td></td>
+                    <td>{{ "${:,.2f}".format(balance) }}</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td style="font-weight:bold">{{ "${:,.2f}".format(grand_total) }}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}

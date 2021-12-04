@@ -1,0 +1,32 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Transactions
+{% endblock %}
+
+{% block main %}
+    <!-- Add results table -->
+    <div>
+        <table class="center">
+            <thead>
+                <th>Action</th>
+                <th>Stock</th>
+                <th>Number of Shares</th>
+                <th>Price</th>
+                <th>Date</th>
+            </thead>
+            <tbody>
+                {% for row in transactions %}
+                    <tr>
+                        <td>{{ row.type }}</td>
+                        <td>{{ row.symbol }}</td>
+                        <td>{{ row.shares }}</td>
+                        <td>{{ "${:,.2f}".format(row.price) }}</td>
+                        <td>{{ row.date }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+{% endblock %}
