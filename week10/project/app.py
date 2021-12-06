@@ -49,11 +49,6 @@ def book():
     # Result of book
     return apology("TODO")
 
-@app.route("/search", methods=["GET", "POST"])
-def search():
-    # Query API for book and search for book
-    return apology("TODO")
-
 @app.route("/random", methods=["GET", "POST"])
 def random():
     # Query API for book and generate random book
