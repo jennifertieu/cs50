@@ -37,7 +37,9 @@ def index():
     if request.method == "POST":
         if request.form.get("genre"):
             query_url = os.path.join(open_library_url, "subjects", request.form.get("genre") + ".json?published_in=2021&limit=1")
-            print(query_url)
+            # Check if cover ID is not null
+            # Get ISBN number
+            # Get cover image and display
             return render_template("index.html")
             
     else:
